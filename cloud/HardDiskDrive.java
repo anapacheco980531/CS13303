@@ -25,7 +25,7 @@ public class HardDiskDrive {
 			System.err.println("La capacidad minima es " + MIN_CAPACITY);
 		}
 		if ( capacityGB % CAPACITY_MULTIPLE != 0){
-		System.err.println("La capacidad debe ser multiplo de " + CAPACITY_MULTIPLE)
+		System.err.println("La capacidad debe ser multiplo de " + CAPACITY_MULTIPLE);
 		}
 
 		StringBuilder sb = new StringBuilder();
