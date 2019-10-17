@@ -1,5 +1,7 @@
 package cloud;
 
+import cloud.exceptions.CloudGenericExceptions;
+
 public class HardDiskDrive {
 	String id;						// Identificador único
 	long capacityGB;				// Capacidad en GB
@@ -21,10 +23,13 @@ public class HardDiskDrive {
 		this.unitNumber = unitNumber;
 		// Escribe tu código {
 		if ( capacityGB >= MIN_CAPACITY ) {
+			throw new CloudGenericExceptions("La capacidad capacidad minima es " + MIN_CAPACITY)
+
             this.capacityGB =MIN_CAPACITY;
 			System.err.println("La capacidad minima es " + MIN_CAPACITY);
 		}
 		if ( capacityGB % CAPACITY_MULTIPLE != 0){
+			throw new CloudGenericExceptions("La capacidad debe ser multiplo de " + CAPACITY_MULTIPLE)
 		System.err.println("La capacidad debe ser multiplo de " + CAPACITY_MULTIPLE);
 		}
 
